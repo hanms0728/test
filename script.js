@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // 서버로부터 데이터를 불러오는 함수
     async function fetchWeights() {
         try {
-            const response = await fetch('http://localhost:3000/weights');
+            const response = await fetch(`${serverURL}/weights`);
             if (response.ok) {
                 const weights = await response.json();
                 displayWeights(weights);
