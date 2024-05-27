@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MongoDB Atlas 연결
-const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://qaz8541ff:hanms5609!@cluster0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://qaz8541ff:hanms5609@cluster0.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
