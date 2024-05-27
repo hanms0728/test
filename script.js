@@ -1,6 +1,32 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    // Initial setup
     const magicButton = document.getElementById('magicButton');
-    
+    const weightSlider = document.getElementById('weight');
+    const weightValue = document.getElementById('weightValue');
+    const weightForm = document.getElementById('weightForm');
+    const resultDiv = document.getElementById('result');
+
+    // Initial value display
+    weightValue.textContent = weightSlider.value;
+
+    // Event listener for weight slider input
+    weightSlider.addEventListener('input', (e) => {
+        weightValue.textContent = e.target.value;
+    });
+
+    // Event listener for form submission
+    weightForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const weight = parseInt(weightSlider.value, 10);
+        resultDiv.innerHTML = '';
+        const img = document.createElement('img');
+        img.src = weight > 50 ? 'hamster.jpg' : 'nohamster.jpg';
+        img.alt = weight > 50 ? 'Hamster' : 'No Hamster';
+        img.style.width = '150px';
+        resultDiv.appendChild(img);
+    });
+
+    // Magic button event listener
     magicButton.addEventListener('click', () => {
         alert('Magic!');
     });
@@ -33,17 +59,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-    // Contact form submit event
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('name').value;
-        const message = document.getElementById('message').value;
-        alert(`Name: ${name}\nMessage: ${message}`);
-        contactForm.reset();
-    });
-
-    // Image slider
+    // Image slider functionality
     let currentSlide = 0;
     const slides = document.querySelectorAll('.slides');
     const showSlide = (index) => {

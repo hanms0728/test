@@ -8,11 +8,11 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to My Enhanced Web Page</h1>
+        <h1>씁덕 잠민이 뚠스터</h1>
     </header>
     <main>
         <section>
-            <h2>Image Gallery</h2>
+            <h2>잠민이</h2>
             <div class="gallery">
                 <img src="image1.jpg" alt="Image 1">
                 <img src="image2.jpg" alt="Image 2">
@@ -20,17 +20,17 @@
             </div>
         </section>
         <section>
-            <h2>Contact Form</h2>
-            <form id="contactForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" required></textarea>
-                <button type="submit">Submit</button>
+            <h2>뚠스터 몸무게</h2>
+            <form id="weightForm">
+                <label for="weight">몸무게를 넣어라:</label>
+                <input type="range" id="weight" name="weight" min="0" max="100" value="50">
+                <span id="weightValue">50</span> kg
+                <button type="submit">제출해라</button>
             </form>
+            <div id="result"></div>
         </section>
         <section>
-            <h2>Image Slider</h2>
+            <h2>너의 모습은 이렇다</h2>
             <div class="slider">
                 <img src="slide1.jpg" class="slides" alt="Slide 1">
                 <img src="slide2.jpg" class="slides" alt="Slide 2">
@@ -38,9 +38,6 @@
             </div>
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Enhanced Web Page</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>
