@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+    const serverURL = window.SERVER_URL;
     const weightSlider = document.getElementById('weight');
     const weightValue = document.getElementById('weightValue');
     const weightForm = document.getElementById('weightForm');
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
         // 서버에 데이터 전송
         try {
-            const response = await fetch('http://localhost:3000/weights', {
+            const response = await fetch(`${serverURL}/weights`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
