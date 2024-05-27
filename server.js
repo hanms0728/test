@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 // MongoDB Atlas 연결
-const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://codeit:hanms5609@mongodb-cluster.t5eg2vz.mongodb.net/hamster?retryWrites=true&w=majority
+const mongoURI = process.env.MONGODB_URI || 'mongodb+srv://qaz8541ff:hanms5609@hamster.aill0zh.mongodb.net/?retryWrites=true&w=majority&appName=hamster
 ';
 mongoose.connect(mongoURI, {
     useNewUrlParser: true,
